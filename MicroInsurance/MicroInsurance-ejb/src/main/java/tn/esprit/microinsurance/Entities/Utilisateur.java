@@ -24,7 +24,7 @@ public class Utilisateur implements Serializable {
 	String nom;
 	@Column(name = "UT_PRENOM")
 	String prenom;
-	@Column(name = "UT_ADRESSE_MAIL")
+	@Column(name = "UT_ADRESS_MAIL")
 	String adresseMail;
 
 	public Utilisateur() {

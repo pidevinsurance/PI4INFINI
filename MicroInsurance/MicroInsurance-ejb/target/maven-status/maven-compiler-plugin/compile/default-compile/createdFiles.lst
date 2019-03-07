@@ -1,1 +1,3 @@
-tn\esprit\microinsurance\entity\Utilisateur.class
+tn\esprit\microinsurance\Entities\Utilisateur.class
+tn\esprit\microinsurance\Entities\TypesMicroInsurance.class
+tn\esprit\microinsurance\Entities\MicroInsurance.class

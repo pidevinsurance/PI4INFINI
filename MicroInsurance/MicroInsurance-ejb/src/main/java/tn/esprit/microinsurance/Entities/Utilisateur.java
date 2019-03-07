@@ -20,6 +20,14 @@ public class Utilisateur implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "UT_ID")
 	int id;
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	@Column(name = "UT_NOM")
 	String nom;
 	@Column(name = "UT_PRENOM")

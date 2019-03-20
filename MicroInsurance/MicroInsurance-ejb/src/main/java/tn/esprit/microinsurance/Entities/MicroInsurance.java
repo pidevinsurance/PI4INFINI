@@ -1,12 +1,19 @@
 package tn.esprit.microinsurance.Entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,16 +25,27 @@ public class MicroInsurance implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "MI_ID")
-	int id;
+	private int id;
 	
 	@Column(name = "NB_INSURED")
-	int nb_insured;
+	private int nb_insured;
 	
 	@Column(name = "NB_CONTRACTS")
-	int nb_contracts;
+	private int nb_contracts;
 	
 	@Column(name = "MI_DESCRIPTION")
-	String Description;
+	private String Description;
+	
+	@Enumerated( EnumType.STRING)
+	private TypesMicroInsurance	type;
+	
+	
+	@Column(name = "MI_Adress")
+	private String Adress;
+	
+	
+	@OneToMany(mappedBy="MicroInsurance", cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
+	private List<Contract> contracts = new ArrayList<>();
 	
 	
 	public int getId() {
@@ -90,10 +108,5 @@ public class MicroInsurance implements Serializable {
 	}
 
 
-	@Column(name = "MI_TYPE")
-	TypesMicroInsurance	type;
-	
-	
-	@Column(name = "MI_Adress")
-	String Adress;
+
 }

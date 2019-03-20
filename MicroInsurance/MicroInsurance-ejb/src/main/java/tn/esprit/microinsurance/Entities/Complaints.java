@@ -18,7 +18,6 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-@Table(name = "MI_COMPLAINTS")
 public class Complaints implements Serializable {
 
 	
@@ -27,7 +26,7 @@ public class Complaints implements Serializable {
 
 	
 	@EmbeddedId
-	private ComplaintsPK Complaint_id;
+	private ComplaintsPK Complaint_id; 
 	
 
 	@ManyToOne

@@ -44,7 +44,7 @@ public class MicroInsurance implements Serializable {
 	private String Adress;
 	
 	
-	@OneToMany(mappedBy="MicroInsurance", cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
+	@OneToMany(mappedBy="microInsurance", cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
 	private List<Contract> contracts = new ArrayList<>();
 	
 	

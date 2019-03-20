@@ -10,7 +10,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -69,19 +68,19 @@ public class User implements Serializable {
 	private String USER_CIN;
 	
 	
-	@OneToMany(mappedBy="User")
+	@OneToMany(mappedBy="user")
 	private List<Appointment> appointments;
 	
-	@OneToMany(mappedBy="User", cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Contract> contracts = new ArrayList<>();
 
-	@OneToMany(mappedBy="User")
+	@OneToMany(mappedBy="user")
 	private List<Indemnity_Request> IndemnityRequests;
 	
-	@OneToMany(mappedBy="User")
+	@OneToMany(mappedBy="user")
 	private List<Quotation> quotations;
 	
-	@OneToMany(mappedBy="User")
+	@OneToMany(mappedBy="user")
 	private List<Complaints> claims;
 	
 	public int getId() {

@@ -20,7 +20,7 @@ public class Sinister_Report implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId
-	private QuotationPK Quotation_id;
+	private SinisterReportPK Report_id;
 
 
 	@ManyToOne

@@ -8,8 +8,6 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -41,7 +39,13 @@ public class User implements Serializable {
 	private String Mail;
 	@Column(name = "USER_ADRESS")
 	private String Adress;
-
+	@Column(name = "USER_AGE")
+	private int Age;
+	
+	@Column(name = "USER_CODEPOSTAL")
+	private int CodePostale;
+	
+	
 	@Column(name = "USER_INCOME")
 	private float Income;
 
@@ -51,14 +55,11 @@ public class User implements Serializable {
 	@Column(name = "USER_OCCUPATION")
 	private String  Occupation;
 	
-	@Enumerated(EnumType.STRING)
-	private Role_User role;
-	
 	@Column(name = "USER_STATUS")
 	private String Status;
 	
 	@Column(name = "USER_PHONENB")
-	private String Phone_Number;
+	private int Phone_Number;
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name = "USER_DateOfBirth")
@@ -77,11 +78,10 @@ public class User implements Serializable {
 	@OneToMany(mappedBy="user")
 	private List<Indemnity_Request> IndemnityRequests;
 	
-	@OneToMany(mappedBy="user")
-	private List<Quotation> quotations;
 	
 	@OneToMany(mappedBy="user")
 	private List<Complaints> claims;
+	
 	
 	public int getId() {
 		return id;
@@ -163,14 +163,6 @@ public class User implements Serializable {
 		Occupation = occupation;
 	}
 
-	public Role_User getRole() {
-		return role;
-	}
-
-	public void setRole(Role_User role) {
-		this.role = role;
-	}
-
 	public String getStatus() {
 		return Status;
 	}
@@ -179,11 +171,11 @@ public class User implements Serializable {
 		Status = status;
 	}
 
-	public String getPhone_Number() {
+	public int getPhone_Number() {
 		return Phone_Number;
 	}
 
-	public void setPhone_Number(String phone_Number) {
+	public void setPhone_Number(int phone_Number) {
 		Phone_Number = phone_Number;
 	}
 

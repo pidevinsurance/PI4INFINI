@@ -1,6 +1,7 @@
 package tn.esprit.microinsurance.Entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -51,13 +52,14 @@ public class Agent implements Serializable {
 	private List<Sinister_Report> reports;
 	
 	@OneToMany(mappedBy="agent")
-	private List<Quotation> quotations;
-	
-	@OneToMany(mappedBy="agent")
 	private List<Complaints> claims;
 	
 	@OneToMany(mappedBy="agent")
 	private List<Premium> premiums;
+	
+	@OneToMany( cascade = CascadeType.ALL)
+	private List<Quotation> quotations= new ArrayList<>();
+
 	
 	public int getId() {
 		return id;

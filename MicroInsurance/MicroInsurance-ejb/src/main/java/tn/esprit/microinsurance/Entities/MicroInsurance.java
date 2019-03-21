@@ -28,21 +28,29 @@ public class MicroInsurance implements Serializable {
 	private int id;
 	
 	@Column(name = "NB_INSURED")
-	private int nb_insured;
+	private int nb_insuredMax;
 	
-	@Column(name = "NB_CONTRACTS")
-	private int nb_contracts;
 	
 	@Column(name = "MI_DESCRIPTION")
 	private String Description;
 	
-	@Enumerated( EnumType.STRING)
-	private TypesMicroInsurance	type;
+	@Column(name = "MI_BUDGET")
+	private float Budget;
 	
 	
-	@Column(name = "MI_Adress")
-	private String Adress;
+	@Column(name = "MI_CONTACT")
+	private int contact;
 	
+	
+	@Column(name = "MI_LOCATION")
+	private String Location;
+	
+	
+	@Enumerated(EnumType.STRING)
+	private TypesMicroInsurance Type;
+
+	@OneToMany(mappedBy="microinsurance")
+	private List<Product> products= new ArrayList<>();
 	
 	@OneToMany(mappedBy="microInsurance", cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
 	private List<Contract> contracts = new ArrayList<>();
@@ -58,25 +66,7 @@ public class MicroInsurance implements Serializable {
 	}
 
 
-	public int getNb_insured() {
-		return nb_insured;
-	}
-
-
-	public void setNb_insured(int nb_insured) {
-		this.nb_insured = nb_insured;
-	}
-
-
-	public int getNb_contracts() {
-		return nb_contracts;
-	}
-
-
-	public void setNb_contracts(int nb_contracts) {
-		this.nb_contracts = nb_contracts;
-	}
-
+	
 
 	public String getDescription() {
 		return Description;
@@ -88,24 +78,55 @@ public class MicroInsurance implements Serializable {
 	}
 
 
-	public TypesMicroInsurance getType() {
-		return type;
+	public int getNb_insuredMax() {
+		return nb_insuredMax;
 	}
 
 
-	public void setType(TypesMicroInsurance type) {
-		this.type = type;
+	public void setNb_insuredMax(int nb_insuredMax) {
+		this.nb_insuredMax = nb_insuredMax;
 	}
 
 
-	public String getAdress() {
-		return Adress;
+	public float getBudget() {
+		return Budget;
 	}
 
 
-	public void setAdress(String adress) {
-		Adress = adress;
+	public void setBudget(float budget) {
+		Budget = budget;
 	}
+
+
+	public int getContact() {
+		return contact;
+	}
+
+
+	public void setContact(int contact) {
+		this.contact = contact;
+	}
+
+
+	public String getLocation() {
+		return Location;
+	}
+
+
+	public void setLocation(String location) {
+		Location = location;
+	}
+
+
+	public List<Contract> getContracts() {
+		return contracts;
+	}
+
+
+	public void setContracts(List<Contract> contracts) {
+		this.contracts = contracts;
+	}
+
 
 
 

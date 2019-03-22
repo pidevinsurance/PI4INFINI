@@ -18,6 +18,7 @@ public class IndemnityRequestServiceImpl implements IIndemnityRequestServiceRemo
 	@Override
 	public void addIndemnityRequest(Indemnity_Request indReq) {
 		em.persist(indReq);
+		//com
 		
 	}
 

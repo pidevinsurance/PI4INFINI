@@ -12,6 +12,7 @@ C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Contract.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\HealthContract.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Type_Prop.java
+C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IAgentServiceRomote.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Agent.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Premium.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Sinister_Report.java
@@ -22,7 +23,9 @@ C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\TechnicalAgent.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\InsuranceRequest.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Role_Agent.java
+C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IAgentServiceLocal.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Appointment.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\AppointmentPK.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Justificatory.java
 C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\LifeContract.java
+C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\AgentServiceImpl.java

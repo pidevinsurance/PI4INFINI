@@ -28,9 +28,11 @@ public class Indemnity_Request implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@EmbeddedId
-	@Column(name = "Indemnity_ID")
-	private IndemnityRequestPk IndemnityRequest_id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "IndemnityRequest_id")
+	private int IndemnityRequest_id;
+
 
 	@Column(name = "Indemnity_DESCRIPTION")
 	String Indemnity_Description;
@@ -46,13 +48,9 @@ public class Indemnity_Request implements Serializable {
 	private List<Justificatory> Justificatories= new ArrayList<>();
 
 	
-	@ManyToOne
-    @JoinColumn(name = "idClient", referencedColumnName = "USER_ID", insertable=false, updatable=false)
+	@ManyToOne(cascade = CascadeType.ALL)
 	private User user;
-
-	@ManyToOne
-    @JoinColumn(name = "idAgent", referencedColumnName = "AGENT_ID", insertable=false, updatable=false)
-	private Agent agent;
+	
 	
 	
 

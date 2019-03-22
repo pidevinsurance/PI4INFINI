@@ -2,6 +2,7 @@ tn\esprit\microinsurance\Entities\LifeContract$ModeType.class
 tn\esprit\microinsurance\Entities\HealthContract.class
 tn\esprit\microinsurance\Entities\IndemnityRequestPk.class
 tn\esprit\microinsurance\Entities\Type_Prop_Cov.class
+tn\esprit\microinsurance\services\Interfaces\IAgentServiceRomote.class
 tn\esprit\microinsurance\Entities\Complaints.class
 tn\esprit\microinsurance\Entities\Justificatory.class
 tn\esprit\microinsurance\Entities\SinisterReportPK.class
@@ -15,6 +16,7 @@ tn\esprit\microinsurance\Entities\Indemnity_Request.class
 tn\esprit\microinsurance\Entities\PropretyContract.class
 tn\esprit\microinsurance\Entities\Role_User.class
 tn\esprit\microinsurance\Entities\Sinister_Report.class
+tn\esprit\microinsurance\services\Interfaces\IAgentServiceLocal.class
 tn\esprit\microinsurance\Entities\Premium.class
 tn\esprit\microinsurance\Entities\TechnicalAgent.class
 tn\esprit\microinsurance\Entities\Complaints$type_subject.class
@@ -25,6 +27,7 @@ tn\esprit\microinsurance\Entities\Contract.class
 tn\esprit\microinsurance\Entities\Agent.class
 tn\esprit\microinsurance\Entities\InsuranceRequest.class
 tn\esprit\microinsurance\Entities\Sinister.class
+tn\esprit\microinsurance\services\Impl\AgentServiceImpl.class
 tn\esprit\microinsurance\Entities\Type_Prop.class
 tn\esprit\microinsurance\Entities\TypesMicroInsurance.class
 tn\esprit\microinsurance\Entities\ComplaintsPK.class

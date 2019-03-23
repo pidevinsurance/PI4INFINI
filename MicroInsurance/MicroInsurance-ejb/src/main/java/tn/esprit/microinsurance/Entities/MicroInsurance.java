@@ -7,8 +7,6 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -45,15 +43,10 @@ public class MicroInsurance implements Serializable {
 	@Column(name = "MI_LOCATION")
 	private String Location;
 	
-	
-	@Enumerated(EnumType.STRING)
-	private TypesMicroInsurance Type;
 
 	@OneToMany(mappedBy="microinsurance")
 	private List<Product> products= new ArrayList<>();
 	
-	@OneToMany(mappedBy="microInsurance", cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
-	private List<Contract> contracts = new ArrayList<>();
 	
 	
 	public int getId() {
@@ -118,14 +111,15 @@ public class MicroInsurance implements Serializable {
 	}
 
 
-	public List<Contract> getContracts() {
-		return contracts;
+	public List<Product> getProducts() {
+		return products;
 	}
 
 
-	public void setContracts(List<Contract> contracts) {
-		this.contracts = contracts;
+	public void setProducts(List<Product> products) {
+		this.products = products;
 	}
+
 
 
 

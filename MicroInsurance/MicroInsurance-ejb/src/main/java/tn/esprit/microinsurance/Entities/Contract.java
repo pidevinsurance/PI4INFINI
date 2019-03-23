@@ -63,16 +63,29 @@ public class Contract implements Serializable {
 	private List<Premium> premiums= new ArrayList<>();
 	
 	@ManyToOne
-	private MicroInsurance microInsurance;
+	private Product product;
 	
-	public MicroInsurance getMicroInsurance() {
-		return microInsurance;
+
+	public List<Premium> getPremiums() {
+		return premiums;
 	}
 
 
 
-	public void setMicroInsurance(MicroInsurance microInsurance) {
-		this.microInsurance = microInsurance;
+	public void setPremiums(List<Premium> premiums) {
+		this.premiums = premiums;
+	}
+
+
+
+	public Product getProduct() {
+		return product;
+	}
+
+
+
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 
 

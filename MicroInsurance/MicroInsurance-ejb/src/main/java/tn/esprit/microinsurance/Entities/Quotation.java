@@ -10,7 +10,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -69,7 +68,18 @@ public class Quotation implements Serializable{
 
 	@Column(name = "SCORE")
 	private int Score ;
+	
+	@ManyToOne
+	private Product product;
  
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
 	public int getId() {
 		return id;
 	}

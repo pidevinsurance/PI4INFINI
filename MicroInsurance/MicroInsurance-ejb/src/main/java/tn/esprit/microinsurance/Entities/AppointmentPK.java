@@ -1,8 +1,11 @@
 package tn.esprit.microinsurance.Entities;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Embeddable;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 @Embeddable
@@ -18,25 +21,40 @@ public class AppointmentPK implements Serializable{
 	
 	private int idTechnicalAgent;
 	
-	private int  Appointment_id;
-	
-	
-	public AppointmentPK()
-	{
+
+	@Temporal(TemporalType.DATE)
+	private Date dateAppointment;
+
+
+	public AppointmentPK() {
 		super();
 	}
 	
-
 	
+	
+
+
+	public AppointmentPK(int idClient, int idTechnicalAgent, Date dateAppointment) {
+		super();
+		this.idClient = idClient;
+		this.idTechnicalAgent = idTechnicalAgent;
+		this.dateAppointment = dateAppointment;
+	}
+
+
+
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + Appointment_id;
+		result = prime * result + ((dateAppointment == null) ? 0 : dateAppointment.hashCode());
 		result = prime * result + idClient;
 		result = prime * result + idTechnicalAgent;
 		return result;
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -47,7 +65,10 @@ public class AppointmentPK implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		AppointmentPK other = (AppointmentPK) obj;
-		if (Appointment_id != other.Appointment_id)
+		if (dateAppointment == null) {
+			if (other.dateAppointment != null)
+				return false;
+		} else if (!dateAppointment.equals(other.dateAppointment))
 			return false;
 		if (idClient != other.idClient)
 			return false;
@@ -57,30 +78,34 @@ public class AppointmentPK implements Serializable{
 	}
 
 
-
 	public int getIdClient() {
 		return idClient;
 	}
+
 
 	public void setIdClient(int idClient) {
 		this.idClient = idClient;
 	}
 
 
-
-	public int getAppointment_id() {
-		return Appointment_id;
-	}
-
-	public void setAppointment_id(int appointment_id) {
-		Appointment_id = appointment_id;
-	}
-
 	public int getIdTechnicalAgent() {
 		return idTechnicalAgent;
 	}
 
+
 	public void setIdTechnicalAgent(int idTechnicalAgent) {
 		this.idTechnicalAgent = idTechnicalAgent;
 	}
+
+
+	public Date getDateAppointment() {
+		return dateAppointment;
+	}
+
+
+	public void setDateAppointment(Date dateAppointment) {
+		this.dateAppointment = dateAppointment;
+	}
+	
+	
 }

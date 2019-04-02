@@ -43,7 +43,9 @@ public class Agent implements Serializable {
 
 	@Column(name = "AGENT_CIN")
 	private String AGENT_CIN;
-
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="agent")
+	private List<Indemnity_Request> IndemnityRequests;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="agent")
 	private List<Sinister_Report> reports;

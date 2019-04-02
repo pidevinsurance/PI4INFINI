@@ -46,6 +46,20 @@ public class Appointment implements Serializable {
 	public User getUser() {
 		return user;
 	}
+	
+	
+
+	public AppointmentPK getAppointment_id() {
+		return Appointment_id;
+	}
+
+
+
+	public void setAppointment_id(AppointmentPK appointment_id) {
+		Appointment_id = appointment_id;
+	}
+
+
 
 	public void setUser(User user) {
 		this.user = user;

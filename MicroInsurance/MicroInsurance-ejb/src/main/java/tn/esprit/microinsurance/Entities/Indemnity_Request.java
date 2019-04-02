@@ -28,14 +28,14 @@ public class Indemnity_Request implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "IndemnityRequest_id")
-	private int IndemnityRequest_id;
+	@EmbeddedId
+	@Column(name = "Indemnity_ID")
+	private IndemnityRequestPk IndemnityRequest_id;
 
 
 	@Column(name = "Indemnity_DESCRIPTION")
 	String Indemnity_Description;
+	
 
 	@Temporal(TemporalType.DATE)
 	@Column(name = "Indemnity_DATE")
@@ -48,11 +48,25 @@ public class Indemnity_Request implements Serializable {
 	private List<Justificatory> Justificatories= new ArrayList<>();
 
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
+    @JoinColumn(name = "idClient", referencedColumnName = "USER_ID", insertable=false, updatable=false)
 	private User user;
 	
+	@ManyToOne
+    @JoinColumn(name = "idAgent", referencedColumnName = "AGENT_ID", insertable=false, updatable=false)
+	private Agent agent;
 	
+	@ManyToOne( cascade = CascadeType.ALL)
+	private TechnicalAgent technicalAgent;
 	
+
+	public IndemnityRequestPk getIndemnityRequest_id() {
+		return IndemnityRequest_id;
+	}
+
+	public void setIndemnityRequest_id(IndemnityRequestPk indemnityRequest_id) {
+		IndemnityRequest_id = indemnityRequest_id;
+	}
 
 	public String getIndemnity_Description() {
 		return Indemnity_Description;
@@ -77,6 +91,25 @@ public class Indemnity_Request implements Serializable {
 	public void setValide(boolean isValide) {
 		this.isValide = isValide;
 	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public TechnicalAgent getTechnicalAgent() {
+		return technicalAgent;
+	}
+
+	public void setTechnicalAgent(TechnicalAgent technicalAgent) {
+		this.technicalAgent = technicalAgent;
+	}
+	
+	
+	
 	
 
 }

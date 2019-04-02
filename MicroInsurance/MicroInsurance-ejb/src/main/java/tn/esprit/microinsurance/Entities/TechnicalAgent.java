@@ -3,6 +3,7 @@ package tn.esprit.microinsurance.Entities;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -46,6 +47,9 @@ public class TechnicalAgent implements Serializable {
     
 	@OneToMany(mappedBy="technical_agent")
 	private List<Appointment> appointments;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="technicalAgent")
+	private List<Indemnity_Request> Indemnity_Requests;
 
 	public int getId() {
 		return id;
@@ -110,4 +114,14 @@ public class TechnicalAgent implements Serializable {
 	public void setAppointments(List<Appointment> appointments) {
 		this.appointments = appointments;
 	}
+
+	public List<Indemnity_Request> getIndemnity_Requests() {
+		return Indemnity_Requests;
+	}
+
+	public void setIndemnity_Requests(List<Indemnity_Request> indemnity_Requests) {
+		Indemnity_Requests = indemnity_Requests;
+	}
+	
+	
 }

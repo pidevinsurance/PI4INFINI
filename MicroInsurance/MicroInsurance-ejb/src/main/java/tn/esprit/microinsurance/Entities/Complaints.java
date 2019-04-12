@@ -1,7 +1,7 @@
 package tn.esprit.microinsurance.Entities;
 
 import java.io.Serializable;
-import java.util.Date;
+
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
@@ -34,6 +34,36 @@ public class Complaints implements Serializable {
 	private User user;
 
 
+	public User getUser() {
+		return user;
+	}
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+	public Agent getAgent() {
+		return agent;
+	}
+
+
+	public void setAgent(Agent agent) {
+		this.agent = agent;
+	}
+
+
+	public Type_subject getType_subject() {
+		return type_subject;
+	}
+
+
+	public void setType_subject(Type_subject type_subject) {
+		this.type_subject = type_subject;
+	}
+
+
 	@ManyToOne
 	@JoinColumn(name = "idAgent", referencedColumnName = "AGENT_ID", insertable=false, updatable=false)
 	private Agent agent;
@@ -47,13 +77,10 @@ public class Complaints implements Serializable {
 	@Column(name = "COMPLAINT_STATUS")
 	private String status;
 	
-	@Temporal(TemporalType.DATE)
-	private Date Date_Of_Pub ;
-	
+
 	@Enumerated(EnumType.STRING)
-	private type_subject type_subject;
+	private Type_subject type_subject;
 	
-	public enum type_subject{application,refunds,report,rescission}
 	
 
 	public ComplaintsPK getComplaint_id() {

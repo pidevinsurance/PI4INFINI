@@ -43,7 +43,7 @@ public class InsuranceRequest implements Serializable {
 	private Quotation quotation; 
 
 	@OneToMany( cascade = CascadeType.ALL)
-	private List<Justificatory> Justificatories= new ArrayList<>();
+	private List<Justificatory> Justificatories ;
 	
 	public int getRequest_id() {
 		return Request_id;

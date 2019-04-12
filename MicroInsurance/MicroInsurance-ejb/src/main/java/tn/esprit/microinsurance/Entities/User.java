@@ -65,6 +65,10 @@ public class User implements Serializable {
 	@Column(name = "USER_DateOfBirth")
 	private Date DateOfBirth;
 	
+	@Temporal(TemporalType.DATE)
+	@Column(name = "USER_JOINDATE")
+	private Date JoinDate;
+	
 	@Column(name = "USER_CIN")
 	private String USER_CIN;
 	
@@ -73,7 +77,7 @@ public class User implements Serializable {
 	private List<Appointment> appointments;
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	private List<Contract> contracts = new ArrayList<>();
+	private List<Contract> contracts ;
 
 	@OneToMany(mappedBy="user")
 	private List<Indemnity_Request> IndemnityRequests;

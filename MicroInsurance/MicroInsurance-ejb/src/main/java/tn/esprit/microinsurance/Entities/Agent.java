@@ -58,7 +58,7 @@ public class Agent implements Serializable {
 	private List<Premium> premiums;
 	
 	@OneToMany( cascade = CascadeType.ALL)
-	private List<Quotation> quotations= new ArrayList<>();
+	private List<Quotation> quotations;
 
 	
 	public int getId() {

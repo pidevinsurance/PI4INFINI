@@ -35,9 +35,6 @@ public class Indemnity_Request implements Serializable {
 	@Column(name = "Indemnity_DESCRIPTION")
 	String Indemnity_Description;
 
-	@Temporal(TemporalType.DATE)
-	@Column(name = "Indemnity_DATE")
-	private Date Indemnity_date;
 
 	@Column(name = "IS_VALID")
 	private boolean isValide;
@@ -64,13 +61,6 @@ public class Indemnity_Request implements Serializable {
 		Indemnity_Description = indemnity_Description;
 	}
 
-	public Date getIndemnity_date() {
-		return Indemnity_date;
-	}
-
-	public void setIndemnity_date(Date indemnity_date) {
-		Indemnity_date = indemnity_date;
-	}
 
 	public boolean isValide() {
 		return isValide;

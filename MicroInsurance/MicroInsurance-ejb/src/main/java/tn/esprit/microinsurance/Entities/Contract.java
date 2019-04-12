@@ -24,6 +24,8 @@ public class Contract implements Serializable {
 
 
 
+	
+
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,11 +58,11 @@ public class Contract implements Serializable {
 	private String Description;
 	
 	@OneToMany(mappedBy="contract", cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
-	private List<Sinister> sinisters = new ArrayList<>();
+	private List<Sinister> sinisters;
 
 	
 	@OneToMany(mappedBy="contract")
-	private List<Premium> premiums= new ArrayList<>();
+	private List<Premium> premiums;
 	
 	@ManyToOne
 	private Product product;

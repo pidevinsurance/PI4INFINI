@@ -22,7 +22,6 @@ public class PremiumPk implements Serializable {
 		int result = 1;
 		result = prime * result + AgentId;
 		result = prime * result + ContractId;
-		result = prime * result + PremiumId;
 		return result;
 	}
 
@@ -39,16 +38,14 @@ public class PremiumPk implements Serializable {
 			return false;
 		if (ContractId != other.ContractId)
 			return false;
-		if (PremiumId != other.PremiumId)
-			return false;
+
 		return true;
 	}
 
 	private int ContractId;
 	
 	private int AgentId ;
-	
-	private int PremiumId;
+
 
 	public int getContractId() {
 		return ContractId;
@@ -66,14 +63,7 @@ public class PremiumPk implements Serializable {
 		AgentId = agentId;
 	}
 
-	public int getPremiumId() {
-		return PremiumId;
-	}
 
-	public void setPremiumId(int premiumId) {
-		PremiumId = premiumId;
-	}
-	
 	
 
 }

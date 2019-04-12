@@ -23,6 +23,10 @@ public class Quotation implements Serializable{
 
 
 
+	public Quotation() {
+		super();
+	}
+
 	private static final long serialVersionUID = 1L;
 
 	@Id

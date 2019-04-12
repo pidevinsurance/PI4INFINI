@@ -1,8 +1,12 @@
 package tn.esprit.microinsurance.Entities;
 
 import java.io.Serializable;
+import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Embeddable
 public class IndemnityRequestPk  implements Serializable{
@@ -21,7 +25,6 @@ public class IndemnityRequestPk  implements Serializable{
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + IndemnityRequest_id;
 		result = prime * result + idAgent;
 		result = prime * result + idClient;
 		return result;
@@ -36,8 +39,7 @@ public class IndemnityRequestPk  implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		IndemnityRequestPk other = (IndemnityRequestPk) obj;
-		if (IndemnityRequest_id != other.IndemnityRequest_id)
-			return false;
+		
 		if (idAgent != other.idAgent)
 			return false;
 		if (idClient != other.idClient)
@@ -50,11 +52,24 @@ public class IndemnityRequestPk  implements Serializable{
 	
 	private int idAgent;
 	
-	private int  IndemnityRequest_id;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "Indemnity_DATE")
+	private Date Indemnity_date;
 
 	public int getIdClient() {
 		return idClient;
 	}
+
+	public Date getIndemnity_date() {
+		return Indemnity_date;
+	}
+
+
+	public void setIndemnity_date(Date indemnity_date) {
+		Indemnity_date = indemnity_date;
+	}
+
 
 	public void setIdClient(int idClient) {
 		this.idClient = idClient;
@@ -68,11 +83,5 @@ public class IndemnityRequestPk  implements Serializable{
 		this.idAgent = idAgent;
 	}
 
-	public int getIndemnityRequest_id() {
-		return IndemnityRequest_id;
-	}
 
-	public void setIndemnityRequest_id(int indemnityRequest_id) {
-		IndemnityRequest_id = indemnityRequest_id;
-	}
 }

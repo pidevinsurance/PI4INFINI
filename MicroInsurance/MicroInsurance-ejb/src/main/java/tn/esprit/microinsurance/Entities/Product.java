@@ -1,6 +1,8 @@
 package tn.esprit.microinsurance.Entities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -15,30 +17,63 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "T_Product")
-public class Product {
+public class Product implements Serializable {
 	
-	
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "PRODUCT_ID")
 	private int ProductId;
 	
-	@Column(name = "PRODUCT_DESCRIPTION")
-	private String Descripition;
-	
-	@Column(name = "PRODUCT_LABEL")
-	private String Label;
+	@Enumerated(EnumType.STRING)
+	private ProductType  Label;
 
+	@Column(name = "PRODUCT_DESCRIPTION")
+	private String Descripition; 
+	
 	@Enumerated(EnumType.STRING)
 	private TypesMicroInsurance Type;
 	
 	@Column(name = "PRODUCT_File")
 	private String file;
 	
+	@Column(name = "PRODUCT_IMG")
+	private String image;
+	
+	@Temporal(TemporalType.DATE)
+	private Date DateCreation ;
+	
+	public Date getDateCreation() {
+		return DateCreation;
+	}
+	public void setDateCreation(Date dateCreation) {
+		DateCreation = dateCreation;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public List<Contract> getContracts() {
+		return contracts;
+	}
+	public void setContracts(List<Contract> contracts) {
+		this.contracts = contracts;
+	}
+	public List<Quotation> getQuotations() {
+		return quotations;
+	}
+	public void setQuotations(List<Quotation> quotations) {
+		this.quotations = quotations;
+	}
+
 	@OneToMany(mappedBy="product", cascade = {CascadeType.ALL}, fetch=FetchType.EAGER)
 	private List<Contract> contracts = new ArrayList<>();
 	
@@ -49,6 +84,22 @@ public class Product {
 	@ManyToOne
 	private MicroInsurance microinsurance;
 	
+	
+	
+	
+	
+	public Product( String descripition, ProductType label,TypesMicroInsurance type, String file, String image ) {
+		super();
+		Label = label;
+		Descripition = descripition;
+		Type = type;
+		this.file = file;
+		this.image = image;
+	
+		
+	}
+	public Product(){}
+
 	public int getProductId() {
 		return ProductId;
 	}
@@ -65,11 +116,11 @@ public class Product {
 		Descripition = descripition;
 	}
 
-	public String getLabel() {
+	public ProductType  getLabel() {
 		return Label;
 	}
 
-	public void setLabel(String label) {
+	public void setLabel(ProductType  label) {
 		Label = label;
 	}
 	public TypesMicroInsurance getType() {
@@ -84,6 +135,19 @@ public class Product {
 		return file;
 	}
 
+	public Product(int productId, ProductType  label, String descripition, TypesMicroInsurance type, String file,
+			String image, List<Contract> contracts, List<Quotation> quotations, MicroInsurance microinsurance) {
+		super();
+		ProductId = productId;
+		Label = label;
+		Descripition = descripition;
+		Type = type;
+		this.file = file;
+		this.image = image;
+		this.contracts = contracts;
+		this.quotations = quotations;
+		this.microinsurance = microinsurance;
+	}
 	public void setFile(String file) {
 		this.file = file;
 	}

@@ -10,9 +10,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
 
 
 
@@ -25,6 +23,13 @@ public class Complaints implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	
+	public Complaints() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	@EmbeddedId
 	private ComplaintsPK Complaint_id; 
 	
@@ -32,6 +37,31 @@ public class Complaints implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "idClient", referencedColumnName = "USER_ID", insertable=false, updatable=false)
 	private User user;
+
+
+	@ManyToOne
+	@JoinColumn(name = "idAgent", referencedColumnName = "AGENT_ID", insertable=false, updatable=false)
+	private Agent agent;
+
+	
+
+	
+
+
+	public Complaints(ComplaintsPK complaint_id, String complaintText, String status, Type_subject type_subject) {
+		super();
+		Complaint_id = complaint_id;
+		ComplaintText = complaintText;
+		this.status = status;
+		this.type_subject = type_subject;
+	}
+
+
+	public Complaints(String complaintText, Type_subject type_subject) {
+		super();
+		ComplaintText = complaintText;
+		this.type_subject = type_subject;
+	}
 
 
 	public User getUser() {
@@ -64,11 +94,6 @@ public class Complaints implements Serializable {
 	}
 
 
-	@ManyToOne
-	@JoinColumn(name = "idAgent", referencedColumnName = "AGENT_ID", insertable=false, updatable=false)
-	private Agent agent;
-
-	
 	
 	@Column(name = "COMPLAINT_TEXT")
 	private String ComplaintText;

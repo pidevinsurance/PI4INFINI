@@ -1,6 +1,7 @@
 package tn.esprit.microinsurance.Services.Interf;
 
-import java.math.BigInteger;
+
+import java.util.Date;
 import java.util.List;
 
 import javax.ejb.Remote;
@@ -15,6 +16,7 @@ public interface IComplaintsRemote {
 	
 	public List<Complaints> displayComplaints();
 	Long getComplaintBystring(Type_subject type);
+	void ajouterComplaint(Date dateofpub, int idAgent, int idClient, String text, Type_subject type);
 
 
 

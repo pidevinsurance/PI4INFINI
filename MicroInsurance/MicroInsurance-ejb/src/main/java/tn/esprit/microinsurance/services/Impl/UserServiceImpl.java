@@ -35,6 +35,7 @@ public UserServiceImpl(){
 };
 //@Override
 public int addUser(Utilisateur user) {
+	user.setPassword(encrypt(user.getPassword()));
 	user.setToken(generateCode());
 em.persist(user);
 try {

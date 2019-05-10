@@ -46,15 +46,22 @@ public class UserBean implements Serializable {
 
 	public UserBean() {}
  
-	public void addUser()
-	{
+	public String addUser()
+	{String page=null;
 		Utilisateur f= new Utilisateur();	
 		f.setNom(nom);
 		f.setPassword(password);
 		f.setPrenom(prenom);
 		f.setAdresseMail(adresseMail);
 		f.setRole("Client");
-		UserServiceImpl.addUser(f); 
+		if(f.getAdresseMail().length()==0 || f.getNom().length()==0 || f.getPrenom().length()==0 || f.getPassword().length()==0 )
+		{FacesContext.getCurrentInstance().addMessage("form:btn", new FacesMessage(FacesMessage.SEVERITY_WARN,"Empty fields","aaaa"));
+			return "";
+		}
+		UserServiceImpl.addUser(f);
+		page="index?faces-redirect=true";
+		loggedIn=true;	
+		return page;
 	}
 
 	public void removefUser(int UserId)

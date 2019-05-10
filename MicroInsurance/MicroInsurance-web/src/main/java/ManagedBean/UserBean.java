@@ -59,7 +59,7 @@ public class UserBean implements Serializable {
 			return "";
 		}
 		UserServiceImpl.addUser(f);
-		page="index?faces-redirect=true";
+		page="index2?faces-redirect=true";
 		loggedIn=true;	
 		return page;
 	}
@@ -74,11 +74,12 @@ public class UserBean implements Serializable {
 
 		utilisateur=UserServiceImpl.finds(adresseMail, password);
 		if(utilisateur!=null)
-		{page="index?faces-redirect=true";
+		{page="index2?faces-redirect=true";
 		loggedIn=true;	
 		}
-		else{ FacesContext.getCurrentInstance().addMessage("form:btn", new FacesMessage("Bad Credentials"));}
-        return "";
+		else{ FacesContext.getCurrentInstance().addMessage("form:btn", new FacesMessage("Bad Credentials"));
+        return "";}
+		return page;
 
 
 		 

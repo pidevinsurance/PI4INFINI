@@ -64,6 +64,25 @@ public class IndemnityRequestServiceImpl implements IIndemnityRequestServiceRemo
 			System.out.println("failed to update");
 		}
 	}
+	
+	
+	
+	@Override
+	public void UpdateIndemnityRequestValidationDById(IndemnityRequestPk IndemnityRequestId , boolean val) {
+		
+		//Indemnity_Request ind = em.find(Indemnity_Request.class, IndemnityRequestId);
+		//ind.setTechnicalAgent(TechnicalAhent);
+		
+		Query query = em.createQuery("update Indemnity_Request i set isValide=:val where i.IndemnityRequest_id=:IndemnityRequestId");
+		query.setParameter("IndemnityRequestId", IndemnityRequestId);
+		query.setParameter("val", val);
+		int modified = query.executeUpdate();
+		if(modified == 1){
+			System.out.println("successfully updated");
+		}else{
+			System.out.println("failed to update");
+		}
+	}
 
 	
 	

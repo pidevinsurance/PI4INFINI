@@ -50,8 +50,7 @@ public class Agent implements Serializable {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="agent")
 	private List<Sinister_Report> reports;
 	
-	@OneToMany(mappedBy="agent")
-	private List<Quotation> quotations;
+
 	
 	@OneToMany(mappedBy="agent")
 	private List<Complaints> claims;

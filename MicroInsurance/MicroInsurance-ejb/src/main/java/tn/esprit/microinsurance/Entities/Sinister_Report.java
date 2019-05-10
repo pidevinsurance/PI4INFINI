@@ -8,6 +8,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -32,7 +33,22 @@ public class Sinister_Report implements Serializable{
     @JoinColumn(name = "idTechnicalAgent", referencedColumnName = "TECHNICALAGENT_ID", insertable=false, updatable=false)
 	private TechnicalAgent technical_agent;
 	
+	@OneToOne
+	private Indemnity_Request Indemnity_Request;
 	
+
+	
+	
+	
+	
+	public SinisterReportPK getSinisterReport_id() {
+		return SinisterReport_id;
+	}
+
+	public void setSinisterReport_id(SinisterReportPK sinisterReport_id) {
+		SinisterReport_id = sinisterReport_id;
+	}
+
 	public float getCost() {
 		return cost;
 	}
@@ -56,14 +72,22 @@ public class Sinister_Report implements Serializable{
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	
 
-	public Date getCreationDate() {
-		return CreationDate;
+	
+
+	public Indemnity_Request getIndemnity_Request() {
+		return Indemnity_Request;
 	}
 
-	public void setCreationDate(Date creationDate) {
-		CreationDate = creationDate;
+	public void setIndemnity_Request(Indemnity_Request indemnity_Request) {
+		Indemnity_Request = indemnity_Request;
 	}
+
+
+
+
 
 	@Column(name = "SINISTER_COST")
 	private float  cost;
@@ -74,8 +98,9 @@ public class Sinister_Report implements Serializable{
 	@Column(name = "SINISTER_DESCRIPTION")
 	private String description;
 	
-	@Temporal(TemporalType.DATE)
-	@Column(name = "REPORT_CREATIONDATE")
-	private Date CreationDate;
+	
+	
+	
+	
 	
 }

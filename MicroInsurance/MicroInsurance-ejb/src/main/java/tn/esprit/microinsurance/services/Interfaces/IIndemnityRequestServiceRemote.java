@@ -15,7 +15,7 @@ public interface IIndemnityRequestServiceRemote {
 	public List<Indemnity_Request> getAllIndemnityRequest();
 	public Indemnity_Request getIndemnityRequestById(IndemnityRequestPk indId);
 	public void UpdateIndemnityRequestTechnicalAgentIDById(IndemnityRequestPk IndemnityRequestId , TechnicalAgent TechnicalAhent);
-
+	public void UpdateIndemnityRequestValidationDById(IndemnityRequestPk IndemnityRequestId , boolean val);
 
 
 }

@@ -77,8 +77,11 @@ public class User implements Serializable {
 	@OneToMany(mappedBy="user")
 	private List<Indemnity_Request> IndemnityRequests;
 	
-	@OneToMany(mappedBy="user")
-	private List<Quotation> quotations;
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name = "USER_JOINDATE")
+	private Date JoinDate;
+
 	
 	@OneToMany(mappedBy="user")
 	private List<Complaints> claims;
@@ -218,6 +221,32 @@ public class User implements Serializable {
 	public void setContracts(List<Contract> contracts) {
 		this.contracts = contracts;
 	}
+
+	public List<Indemnity_Request> getIndemnityRequests() {
+		return IndemnityRequests;
+	}
+
+	public void setIndemnityRequests(List<Indemnity_Request> indemnityRequests) {
+		IndemnityRequests = indemnityRequests;
+	}
+
+	public Date getJoinDate() {
+		return JoinDate;
+	}
+
+	public void setJoinDate(Date joinDate) {
+		JoinDate = joinDate;
+	}
+
+	public List<Complaints> getClaims() {
+		return claims;
+	}
+
+	public void setClaims(List<Complaints> claims) {
+		this.claims = claims;
+	}
+	
+	
 
 	
 }

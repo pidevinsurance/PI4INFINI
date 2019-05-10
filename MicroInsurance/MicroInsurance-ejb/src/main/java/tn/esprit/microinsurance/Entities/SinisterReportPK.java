@@ -1,6 +1,7 @@
 package tn.esprit.microinsurance.Entities;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Embeddable;
 
@@ -12,21 +13,35 @@ public class SinisterReportPK implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	private int idAgent;
 
+	private int idTechnicalAgent;
+
+	private Date CreationDate;
+	
+	
+	
 
 	public SinisterReportPK() {
-	super();
+		super();
 	}
 	
+	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + RequestReportId;
+		result = prime * result + ((CreationDate == null) ? 0 : CreationDate.hashCode());
 		result = prime * result + idAgent;
 		result = prime * result + idTechnicalAgent;
 		return result;
 	}
+
+
+
+
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -37,7 +52,10 @@ public class SinisterReportPK implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		SinisterReportPK other = (SinisterReportPK) obj;
-		if (RequestReportId != other.RequestReportId)
+		if (CreationDate == null) {
+			if (other.CreationDate != null)
+				return false;
+		} else if (!CreationDate.equals(other.CreationDate))
 			return false;
 		if (idAgent != other.idAgent)
 			return false;
@@ -46,11 +64,8 @@ public class SinisterReportPK implements Serializable {
 		return true;
 	}
 
-	private int idAgent;
-	
-	private int idTechnicalAgent;
-	
-	private int RequestReportId ;
+
+
 
 
 
@@ -62,14 +77,6 @@ public class SinisterReportPK implements Serializable {
 		this.idTechnicalAgent = idTechnicalAgent;
 	}
 
-	public int getRequestReportId() {
-		return RequestReportId;
-	}
-
-	public void setRequestReportId(int requestReportId) {
-		RequestReportId = requestReportId;
-	}
-
 	public int getIdAgent() {
 		return idAgent;
 	}
@@ -78,6 +85,12 @@ public class SinisterReportPK implements Serializable {
 		this.idAgent = idAgent;
 	}
 
-	
-	
+	public Date getCreationDate() {
+		return CreationDate;
+	}
+
+	public void setCreationDate(Date creationDate) {
+		CreationDate = creationDate;
+	}
+
 }

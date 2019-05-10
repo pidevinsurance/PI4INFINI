@@ -3,6 +3,9 @@ package tn.esprit.microinsurance.Entities;
 import java.io.Serializable;
 
 import javax.persistence.Embeddable;
+import java.util.Date;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Embeddable
 public class ComplaintsPK implements Serializable {
@@ -11,21 +14,29 @@ public class ComplaintsPK implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	public ComplaintsPK() {
-		super();
-	}
-
+	private int idClient;
 	
+	@Temporal(TemporalType.DATE)
+	private Date Date_Of_Pub ;
+	
+	private int idAgent;
+	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + Complaint_id;
+		result = prime * result + ((Date_Of_Pub == null) ? 0 : Date_Of_Pub.hashCode());
 		result = prime * result + idAgent;
 		result = prime * result + idClient;
 		return result;
 	}
+
+
+
+
+
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -36,7 +47,10 @@ public class ComplaintsPK implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		ComplaintsPK other = (ComplaintsPK) obj;
-		if (Complaint_id != other.Complaint_id)
+		if (Date_Of_Pub == null) {
+			if (other.Date_Of_Pub != null)
+				return false;
+		} else if (!Date_Of_Pub.equals(other.Date_Of_Pub))
 			return false;
 		if (idAgent != other.idAgent)
 			return false;
@@ -46,11 +60,40 @@ public class ComplaintsPK implements Serializable {
 	}
 
 
-	private int idClient;
+
+
+
+
+
+	public Date getDate_Of_Pub() {
+		return Date_Of_Pub;
+	}
+
+
+
+
+
+
+
+	public void setDate_Of_Pub(Date date_Of_Pub) {
+		Date_Of_Pub = date_Of_Pub;
+	}
+
+
+
+
+
+
+
+	public ComplaintsPK() {
+		super();
+	}
+
 	
-	private int idAgent;
-	
-	private int  Complaint_id;
+
+
+
+
 
 	public int getIdClient() {
 		return idClient;
@@ -68,11 +111,5 @@ public class ComplaintsPK implements Serializable {
 		this.idAgent = idAgent;
 	}
 
-	public int getComplaint_id() {
-		return Complaint_id;
-	}
 
-	public void setComplaint_id(int complaint_id) {
-		Complaint_id = complaint_id;
-	}
 }

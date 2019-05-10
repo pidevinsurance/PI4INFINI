@@ -1,43 +1,79 @@
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\MicroInsurance.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\IndemnityRequestServiceImpl.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\ITechnicalAgentServiceLocal.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IUserServiceRemote.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IAppointmentServiceLocal.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\TechnicalAgentServiceImpl.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\ITechnicalAgentServiceRemote.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\QuotationPK.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IAgentServiceRemote.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\ComplaintsPK.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Quotation.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Type_Prop_Cov.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\PremiumPk.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IIndemnityRequestServiceRemote.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Sinister.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Indemnity_Request.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\SinisterReportPK.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\TypesMicroInsurance.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Role_User.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Contract.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\HealthContract.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\AppointmentServiceImpl.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Type_Prop.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IAppointmentServiceRemote.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Agent.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Premium.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IIndemnityRequestServiceLocal.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IUserServiceLocal.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Sinister_Report.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\User.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\PropretyContract.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Complaints.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\IndemnityRequestPk.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\TechnicalAgent.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\InsuranceRequest.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Role_Agent.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IAgentServiceLocal.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Appointment.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\AppointmentPK.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Justificatory.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\LifeContract.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\UserServiceImpl.java
-C:\Users\khale\git\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\AgentServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Sinister.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Agent.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Premium.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IIndemnityRequestServiceRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Life_quotation.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\IndemnityRequestServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Justificatory.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\TypesMicroInsurance.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\MicroInsurance.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interf\QuoteLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interf\IProductRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Sinister_Report.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\PremiumPk.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Role_User.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\UserServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\ISinisterReportServiceLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Product.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interf\IComplaintsLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Biens.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Finance.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\ISinisterReportServiceRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Contract.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Utilisateur.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\AppointmentPK.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IUserServiceLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\TechnicalAgent.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\ProductType.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\QuoatationImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\SinisterServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interf\FinanceServiceRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interf\IMicroInsuranceLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Type_Prop_Cov.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Indemnity_Request.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IUserServiceRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Property_quotation.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\serv\BiensServices.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Type_subject.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\InsuranceRequest.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\FinanceService.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IAgentServiceRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interf\IUserServiceRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IAgentServiceLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Heath_quotation.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\ISinisterServiceRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\PropretyContract.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\SinisterReportServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\ITechnicalAgentServiceRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\MailSender.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Suggestion.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Appointment.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\AgentServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\ISinisterServiceLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\ProductServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Quotation.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Role_Agent.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interf\IProductLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\IndemnityRequestPk.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\MicroInsuranceServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\TechnicalAgentServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interf\IMicroInsuranceRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\AppointmentServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interf\QuoteRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\User.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\interf\BiensLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\SinisterReportPK.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IAppointmentServiceLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\ComplaintsServiceImpl.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IAppointmentServiceRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\ComplaintsPK.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interf\IComplaintsRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\QuotationMode.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Complaints.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\IIndemnityRequestServiceLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\Type_Prop.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Interfaces\ITechnicalAgentServiceLocal.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\HealthContract.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\Entities\LifeContract.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\interf\BiensRemote.java
+C:\Users\aladin\Desktop\PI total\PI4INFINI\MicroInsurance\MicroInsurance-ejb\src\main\java\tn\esprit\microinsurance\services\Impl\MailSender.java

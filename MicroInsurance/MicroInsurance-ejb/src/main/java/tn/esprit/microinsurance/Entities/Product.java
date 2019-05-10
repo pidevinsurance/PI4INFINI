@@ -46,6 +46,8 @@ public class Product implements Serializable {
 	@Column(name = "PRODUCT_IMG")
 	private String image;
 	
+	private int nbreVue;
+	
 	@Temporal(TemporalType.DATE)
 	private Date DateCreation ;
 	
@@ -155,9 +157,27 @@ public class Product implements Serializable {
 	public MicroInsurance getMicroinsurance() {
 		return microinsurance;
 	}
+	
 
+	public Product(ProductType label, String descripition, TypesMicroInsurance type, String file, String image,
+			int nbreVue, Date dateCreation) {
+		super();
+		Label = label;
+		Descripition = descripition;
+		Type = type;
+		this.file = file;
+		this.image = image;
+		this.nbreVue = nbreVue;
+		DateCreation = dateCreation;
+	}
 	public void setMicroinsurance(MicroInsurance microinsurance) {
 		this.microinsurance = microinsurance;
+	}
+	public int getNbreVue() {
+		return nbreVue;
+	}
+	public void setNbreVue(int nbreVue) {
+		this.nbreVue = nbreVue;
 	}
 	
 

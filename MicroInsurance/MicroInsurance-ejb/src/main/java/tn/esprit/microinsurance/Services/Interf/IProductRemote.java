@@ -25,6 +25,10 @@ public interface IProductRemote {
 	public  HashMap<Number, Number> GetProductByContract();
 	BigInteger displayNbProducts();
 	int addSuggestion(Suggestion sug);
+	String getNameProductById(int ProductId);
+	void update(Product product);
+	boolean findIfExist(int ProductId);
+	List<Object[]> MostView();
 	
 
 }

@@ -6,8 +6,8 @@ import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.management.Query;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -15,13 +15,15 @@ import javax.persistence.TypedQuery;
 import tn.esprit.microinsurance.Entities.MicroInsurance;
 import tn.esprit.microinsurance.Entities.Product;
 import tn.esprit.microinsurance.Entities.Suggestion;
-import tn.esprit.microinsurance.Services.Interf.IProductLocal;
 import tn.esprit.microinsurance.Services.Interf.IProductRemote;
 
 
 
+
+
+@LocalBean
 @Stateless
-public class ProductServiceImpl implements IProductLocal , IProductRemote {
+public class ProductServiceImpl implements IProductRemote {
 
 	
 	/**
@@ -70,8 +72,19 @@ public class ProductServiceImpl implements IProductLocal , IProductRemote {
 	}
 
 	@Override
-	public Product displayProductById(Integer idProduct) {
-		return em.find(Product.class, idProduct);
+	public Product displayProductById(Integer ProductId) {
+		TypedQuery<Product> query = 
+				em.createQuery("select p from Product p WHERE p.ProductId=:ProductId", Product.class); 
+				query.setParameter("ProductId", ProductId); 
+				
+				Product product = null; 
+				try {
+					product= query.getSingleResult(); 
+				}
+				catch (Exception e) {
+					System.out.println("Erreur : " + e);
+				}
+				return product;
 	}
 	@Override
 	public List<Product> displayRecentProducts() {
@@ -129,5 +142,32 @@ public class ProductServiceImpl implements IProductLocal , IProductRemote {
 		em.persist(sug);
 		return (sug.getSuggestionId());
 	}
-
+	@Override
+	public String getNameProductById(int ProductId) {
+		Product p = em.find(Product.class, ProductId);
+		return p.getLabel().name();
+		}
+	
+	@Override
+	public void update(Product product) {
+		System.out.println("In updateProduct: ");
+		Product p = em.find(Product.class,product.getProductId());
+		p.setNbreVue(product.getNbreVue());
+		System.out.println("Out of update : ");
+	}
+	@Override
+	public boolean findIfExist(int ProductId){
+		
+		List<Product> products= em.createQuery("from Product where  ProductId=:ProductId", Product.class).setParameter( "ProductId", ProductId) .getResultList();
+		
+		return products.isEmpty();
+	}
+	
+	@Override
+	public List<Object[]>  MostView() {
+		// TODO Auto-generated method stub
+		javax.persistence.Query query = em.createNativeQuery("SELECT `nbreVue` AS nb ,`Label` as Nom FROM `t_product` p GROUP BY p.`Label`");
+		return query.getResultList();
+	}
+	
 }
